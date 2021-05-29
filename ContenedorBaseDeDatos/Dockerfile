@@ -1,0 +1,4 @@
+FROM mysql
+
+RUN --network todo-app --network-alias mysql \ -v todo-mysql-data:/var/lib/mysql \ -e MYSQL_ROOT_PASSWORD=secret \ -e MYSQL_DATABASE=todos \ mysql:5.7	 
+
